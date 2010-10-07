@@ -2,7 +2,12 @@
 
 = Releases =
 
-== v1.01 ==
+== 2010-10-06: v1.01 ==
+  * update of initial local cache
+  * email & publish to the Devoxx wiki of your starred sessions
+  * setting to enable/disable highlighting of sessions in the starred overview that occur at the same time
+  * session details now also shows note information when available for a session
+  * fix of sync bug that could show sessions without room and block info
 
-== v1.00 ==
+== 2010-09-30: v1.00 ==
   * Initial version
