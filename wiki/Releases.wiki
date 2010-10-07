@@ -2,6 +2,11 @@
 
 = Releases =
 
+== 2010-10-07: v1.02 ==
+  * update of initial local cache
+  * fix of fulltext search table contents for sessions where note content was null
+  * input type restrictions on the input fields for the MySchedule registration
+
 == 2010-10-06: v1.01 ==
   * update of initial local cache
   * email & publish to the Devoxx wiki of your starred sessions
