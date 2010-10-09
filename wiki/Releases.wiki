@@ -2,7 +2,7 @@
 
 = Releases =
 
-== 2010-10-07: v1.02 ==
+== 2010-10-07: v1.02 (r6) ==
   * update of initial local cache
   * fix of fulltext search table contents for sessions where note content was null
   * input type restrictions on the input fields for the MySchedule registration
