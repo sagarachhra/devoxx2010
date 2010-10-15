@@ -40,6 +40,7 @@
     <string name="title_speaker_detail">Speaker detail</string>
     <string name="title_notes">Notes</string>
     <string name="title_note_edit">Edit note</string>
+    <string name="title_note_create">Create note</string>
     <string name="title_map">Map</string>
     <string name="title_starred">Starred</string>
     <string name="title_tracks">Tracks</string>
@@ -148,7 +149,6 @@
     <string name="note_delete_confirm">Are you sure you want to delete this note?</string>
     <string name="note_cancel_confirm">Are you sure you want to cancel this note, not saving any modifications?</string>
     
-    <string name="note_goto_session">Show session</string>
     <string name="note_delete">Delete note</string>
 
     <string name="note_before"><xliff:g id="time">%1$s</xliff:g> before session</string>
