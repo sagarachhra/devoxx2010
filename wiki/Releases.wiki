@@ -2,6 +2,16 @@
 
 = Releases =
 
+== 2010-10-21: v1.03 (r48) ==
+  * update of initial local cache
+  * notes activity supports better overview/edit/delete of notes
+  * update of search suggest table
+  * fix of caching problem on appengine for md5-key calculation
+  * fix of sync-bug where speakers could be linked with non-existing sessions
+  * added alphabet indexer to speakers list overview
+  * recreation of full text search table, fixing double entries
+  * title added to MySchedule alert dialogs
+
 == 2010-10-07: v1.02 (r6) ==
   * update of initial local cache
   * fix of fulltext search table contents for sessions where note content was null
