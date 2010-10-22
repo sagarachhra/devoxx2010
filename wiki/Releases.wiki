@@ -1,7 +1,5 @@
 #summary Overview of all releases
 
-= Releases =
-
 == 2010-10-21: v1.03 (r50) ==
   * update of initial local cache
   * notes activity supports better overview/edit/delete of notes
