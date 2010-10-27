@@ -1,5 +1,10 @@
 #summary Overview of all releases
 
+== 2010-10-27: v1.04 (r65) ==
+  * support of labs sessions
+  * update of initial local cache
+  * note edit now has sentences capitalization
+
 == 2010-10-21: v1.03 (r50) ==
   * update of initial local cache
   * notes activity supports better overview/edit/delete of notes
