@@ -1,0 +1,182 @@
+[
+	{
+		"id":901,
+		"lastName":"Shatalin",
+		"bio":"Alex Shatalin is the JetBrains MPS project lead. Before joining JetBrains MPS one year ago, Alex worked as a principal engineer at the Borland Together modeling department, participating in Borland DSL toolkit design and development, open source Eclipse Graphical Modeling Framework development, and in various other MDA/DSL-based application development projects.",
+		"company":"JetBrains",
+		"talks":[
+			{
+				"title":"Language-Oriented Programming in Action",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/901"
+			}
+		],
+		"imageURI":"http://cfp.devoxx.com/img/thumbnail.gif",
+		"firstName":"Alex"
+	},
+	{
+		"id":902,
+		"lastName":"Wielenga",
+		"bio":"Geertjan Wielenga is a Principal Product Manager at Oracle and works for the NetBeans team, providing documentation & training relating to the NetBeans Platform. He is the co-author of several books and has a popular blog at http://blogs.sun.com/geertjan.",
+		"company":"Oracle",
+		"talks":[
+			{
+				"title":"Developing Substantial Java Desktop Applications",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/902"
+			}
+		],
+		"imageURI":"http://cfp.devoxx.com/img/thumbnail.gif",
+		"firstName":"Geertjan"
+	},
+	{
+		"id":903,
+		"lastName":"Knutsen",
+		"bio":"Aslak Knutsen is currently a Senior Software Engineer for the JBoss Seam team at Red Hat, Inc. where he is the project lead for Arquillian and works on projects such as ShrinkWrap, Weld and Seam 3. Previously, Aslak was a Senior Consultant at Conduct AS (working with JBoss related technologies) and Senior Developer at EDB ASA (working with electronic billing/banking systems).",
+		"company":"Red Hat, Inc.",
+		"talks":[
+			{
+				"title":"Java enterprise testing made easy with Arquillian",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/903"
+			}
+		],
+		"imageURI":"http://cfp.devoxx.com/img/thumbnail.gif",
+		"firstName":"Aslak"
+	},
+	{
+		"id":904,
+		"lastName":"Slattery",
+		"bio":"",
+		"company":"IBM",
+		"talks":[
+			{
+				"title":"Developing Enterprise OSGi applications",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/904"
+			}
+		],
+		"imageURI":"http://cfp.devoxx.com/img/thumbnail.gif",
+		"firstName":"Zoe"
+	},
+	{
+		"id":905,
+		"lastName":"Gurov",
+		"bio":"Vadim Gurov is a senior software developer at JetBrains and the YouTrack project lead. He holds a PhD in Computer Science and has over ten years of web application development experience. Vadim believes that language-oriented programming is the next big thing in software industry, and works in touch with the MPS team to create DSLs for database and web development.",
+		"company":"JetBrains",
+		"talks":[
+			{
+				"title":"Language-Oriented Programming in Action",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/901"
+			}
+		],
+		"imageURI":"http://cfp.devoxx.com/img/thumbnail.gif",
+		"firstName":"Vadim"
+	},
+	{
+		"id":906,
+		"lastName":"Epple",
+		"bio":"Anton Epple has more than 10 years experience leading Java projects and has published many articles on the topic. He is a consultant worldwide for a wide variety of companies, ranging from startups to Fortune 500 companies, in many areas, including finance institutions and aerospace. In his spare time, Anton is community leader for the JavaTools Community at Java.net and a member of the NetBeans Dream Team and Governance Board.",
+		"company":"",
+		"talks":[
+			{
+				"title":"Developing Substantial Java Desktop Applications",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/902"
+			}
+		],
+		"imageURI":"http://cfp.devoxx.com/img/thumbnail.gif",
+		"firstName":"Anton"
+	},
+	{
+		"id":244,
+		"talks":[
+			{
+				"title":"Java enterprise testing made easy with Arquillian",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/903"
+			}
+		]
+	},
+	{
+		"id":295,
+		"talks":[
+			{
+				"title":"Java enterprise testing made easy with Arquillian",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/903"
+			}
+		]
+	},
+	{
+		"id":216,
+		"talks":[
+			{
+				"title":"Developing Enterprise OSGi applications",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/904"
+			}
+		]
+	},
+	{
+		"id":272,
+		"talks":[
+			{
+				"title":"Hands-On Scala",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/905"
+			}
+		]
+	},
+	{
+		"id":273,
+		"talks":[
+			{
+				"title":"Hands-On Scala",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/905"
+			}
+		]
+	},
+	{
+		"id":160,
+		"talks":[
+			{
+				"title":"RESTful development with Java",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/906"
+			}
+		]
+	},
+	{
+		"id":331,
+		"talks":[
+			{
+				"title":"Develop your first Flex 4 application",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/907"
+			}
+		]
+	},
+	{
+		"id":182,
+		"talks":[
+			{
+				"title":"Beginning with the Java EE 6 Platform",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/908"
+			}
+		]
+	},
+	{
+		"id":116,
+		"talks":[
+			{
+				"title":"Beginning with the Java EE 6 Platform",
+				"event":"Labs (3h)",
+				"presentationUri":"http://cfp.devoxx.com/rest/v1/events/presentations/908"
+			}
+		]
+	}
+]
