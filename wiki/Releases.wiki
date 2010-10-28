@@ -1,5 +1,11 @@
 #summary Overview of all releases
 
+== 2010-10-28: v1.05 (r75) ==
+  * fix wrong starred session count over different blocks
+  * update of static lab sessions json responses
+  * let a change in the labs sessions also trigger a remote sync
+  * speaker image now with border and shadow
+
 == 2010-10-27: v1.04 (r65) ==
   * support of labs sessions
   * update of initial local cache
