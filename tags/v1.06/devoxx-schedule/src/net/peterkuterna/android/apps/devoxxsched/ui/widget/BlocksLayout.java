@@ -1,0 +1,155 @@
+/*
+ * Copyright 2010 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ * Modified by Peter Kuterna to support dynamic number of columns.
+ */
+package net.peterkuterna.android.apps.devoxxsched.ui.widget;
+
+import net.peterkuterna.android.apps.devoxxsched.R;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
+import android.util.SparseIntArray;
+import android.view.View;
+import android.view.ViewGroup;
+
+/**
+ * Custom layout that contains and organizes a {@link TimeRulerView} and several
+ * instances of {@link BlockView}. Also positions current "now" divider using
+ * {@link R.id#blocks_now} view when applicable.
+ */
+public class BlocksLayout extends ViewGroup {
+
+    private TimeRulerView mRulerView;
+    private View mNowView;
+    private SparseIntArray columnArray = new SparseIntArray();
+
+    public BlocksLayout(Context context) {
+        this(context, null);
+    }
+
+    public BlocksLayout(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public BlocksLayout(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+
+        final TypedArray a = context.obtainStyledAttributes(attrs,
+                R.styleable.BlocksLayout, defStyle, 0);
+
+        a.recycle();
+    }
+
+    private void ensureChildren() {
+        mRulerView = (TimeRulerView) findViewById(R.id.blocks_ruler);
+        mRulerView.setDrawingCacheEnabled(true);
+        if (mRulerView == null) {
+            throw new IllegalStateException("Must include a R.id.blocks_ruler view.");
+        }
+
+        mNowView = findViewById(R.id.blocks_now);
+        mNowView.setDrawingCacheEnabled(true);
+        if (mNowView == null) {
+            throw new IllegalStateException("Must include a R.id.blocks_now view.");
+        }
+    }
+    
+	/**
+     * Remove any {@link BlockView} instances, leaving only
+     * {@link TimeRulerView} remaining.
+     */
+    public void removeAllBlocks() {
+        ensureChildren();
+        removeAllViews();
+        addView(mRulerView);
+        addView(mNowView);
+        columnArray.clear();
+    }
+
+    public void addBlock(BlockView blockView) {
+        blockView.setDrawingCacheEnabled(true);
+        final int columnIndex = blockView.getColumn();
+        int curEntries = columnArray.get(columnIndex + 1, 0);
+        columnArray.put(columnIndex, ++curEntries);
+        addView(blockView, 1);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        ensureChildren();
+
+        mRulerView.measure(widthMeasureSpec, heightMeasureSpec);
+        mNowView.measure(widthMeasureSpec, heightMeasureSpec);
+
+        final int width = mRulerView.getMeasuredWidth();
+        final int height = mRulerView.getMeasuredHeight();
+
+        setMeasuredDimension(resolveSize(width, widthMeasureSpec),
+                resolveSize(height, heightMeasureSpec));
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        ensureChildren();
+
+        final TimeRulerView rulerView = mRulerView;
+        final int nrColumns = getColumns();
+        final int headerWidth = rulerView.getHeaderWidth();
+        final int columnWidth = (getWidth() - headerWidth) / nrColumns;
+
+        rulerView.layout(0, 0, getWidth(), getHeight());
+
+        final int count = getChildCount();
+        for (int i = 0; i < count; i++) {
+            final View child = getChildAt(i);
+            if (child.getVisibility() == GONE) continue;
+
+            if (child instanceof BlockView) {
+                final BlockView blockView = (BlockView) child;
+                final int columnIndex = getColumnIndex(blockView);
+                final int top = rulerView.getTimeVerticalOffset(blockView.getStartTime());
+                final int bottom = rulerView.getTimeVerticalOffset(blockView.getEndTime());
+                final int left = headerWidth + (columnIndex * columnWidth);
+                final int right = left + columnWidth;
+                child.layout(left, top, right, bottom);
+            }
+        }
+
+        // Align now view to match current time
+        final View nowView = mNowView;
+        final long now = System.currentTimeMillis();
+
+        final int top = rulerView.getTimeVerticalOffset(now);
+        final int bottom = top + nowView.getMeasuredHeight();
+        final int left = 0;
+        final int right = getWidth();
+
+        nowView.layout(left, top, right, bottom);
+    }
+    
+    private int getColumns() {
+    	return Math.max(1, columnArray.size());
+    }
+    
+    private int getColumnIndex(BlockView blockView) {
+    	final int column = blockView.getColumn();
+    	final int diff = columnArray.keyAt(columnArray.indexOfKey(column)) - columnArray.indexOfKey(column);
+    	return column - diff;
+    }
+    
+}
