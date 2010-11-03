@@ -1,5 +1,11 @@
 #summary Overview of all releases
 
+== 2010-11-04: v1.05 (r92) ==
+  * update of static lab sessions json responses
+  * fix issue with device rotation during email/publish MySchedule
+  * support for CFP presentation tags
+  * update of initial local cache
+
 == 2010-10-28: v1.05 (r75) ==
   * fix wrong starred session count over different blocks
   * update of static lab sessions json responses
