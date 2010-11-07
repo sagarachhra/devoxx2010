@@ -1,5 +1,13 @@
 #summary Overview of all releases
 
+== 2010-11-07: v1.07 (r109) ==
+  * support for small screens like HTC Wildfire
+  * add AlphabetIndexer to tags overview
+  * added tab to browse sessions by type in the sessions overview
+  * sessions overview now also shows sessions count for track, type, tag
+  * fix issue where tags/search/sessions was detected as search uri
+  * extra indices in db for faster UI
+
 == 2010-11-04: v1.06 (r92) ==
   * update of static lab sessions json responses
   * fix issue with device rotation during email/publish MySchedule
