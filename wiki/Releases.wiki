@@ -1,5 +1,13 @@
 #summary Overview of all releases
 
+== 2010-11-14: v1.08 (r125) ==
+  * visualize sessions with a pinned header listview
+  * update of initial local cache
+  * fix issue to report correct parallel starred session count
+  * validation of activation code for MySchedule
+  * focus list to current/next session during conference
+  * browse sessions by room
+
 == 2010-11-07: v1.07 (r109) ==
   * support for small screens like HTC Wildfire
   * add AlphabetIndexer to tags overview
