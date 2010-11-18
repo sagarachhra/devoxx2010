@@ -1,5 +1,10 @@
 #summary Overview of all releases
 
+== 2010-11-18: v1.09 (r133) ==
+  * Find the sessions coming up next during breaks easy by clicking on 'No sessions nearby.' on the main screen.
+  * Pinned header list view for speakers.
+  * Correct height calculation for focus to current/next session.
+
 == 2010-11-14: v1.08 (r125) ==
   * visualize sessions with a pinned header listview
   * update of initial local cache
